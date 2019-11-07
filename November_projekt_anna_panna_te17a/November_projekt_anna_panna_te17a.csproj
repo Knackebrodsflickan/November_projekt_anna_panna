@@ -44,12 +44,16 @@
   <ItemGroup>
     <Compile Include="Enemy.cs" />
     <Compile Include="Farquaad.cs" />
+    <Compile Include="HerAmazingVoice.cs" />
     <Compile Include="Hero.cs" />
+    <Compile Include="HisBlondWig.cs" />
     <Compile Include="PrinceCharming.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shrek.cs" />
     <Compile Include="TheFairyGodMother.cs" />
+    <Compile Include="Thelonious.cs" />
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

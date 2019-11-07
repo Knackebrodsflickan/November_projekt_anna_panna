@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class HisBlondWig
+    class HisBlondWig : Weapon
     {
     }
 }

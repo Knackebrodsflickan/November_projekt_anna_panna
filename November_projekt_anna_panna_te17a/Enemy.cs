@@ -8,9 +8,15 @@ namespace November_projekt_anna_panna_te17a
 {
     class Enemy
     {
-        static Random generator = new Random();
+       public static Random generator = new Random();
 
-        public int Hp (int H)
+        public int hpEnemies = 30;
 
+        
+
+
+
+        
+        
     }
 }
