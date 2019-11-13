@@ -24,11 +24,17 @@ namespace November_projekt_anna_panna_te17a
             Enemy TheFairyGodMother = new Enemy();
             Enemy PrinceCharming = new Enemy();
 
+
             Console.WriteLine("Which enemy would you like to battle first? Here are your options: ");
-            Console.WriteLine(Farquaad);
+            
             Console.ReadLine();
 
             //Farquaad.speed = 200;
+            var name = "Farquaad";
+
+            Console.WriteLine("{0} is  {1} years old ", name );
+            Console.WriteLine(name.GetType());
+            Console.ReadLine();
 
 
 
@@ -75,7 +81,7 @@ namespace November_projekt_anna_panna_te17a
 
             Console.WriteLine(h.Name);
             Console.ReadLine(); */
-           
+
         }
     }
 }
