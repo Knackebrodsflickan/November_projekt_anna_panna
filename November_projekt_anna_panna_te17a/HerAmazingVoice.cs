@@ -8,5 +8,6 @@ namespace November_projekt_anna_panna_te17a
 {
     class HerAmazingVoice : Weapon
     {
+
     }
 }

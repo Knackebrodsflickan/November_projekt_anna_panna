@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class Farquaad : Enemy
+    class Farquaad : Enemy 
     {
        
-        public int damageWihtoutWeapon(int damageWithoutWeapon)
+        public int damageWihtoutWeaponFarquaad(int damageWithoutWeaponFarquaad)
         {
-            return generator.Next(2, 10);
+            return generator.Next(2, 5);
 
         }
-        public int damageWithWeapon
+
+        
+
+        //public string Name = "Farquaad"; 
+
+       /* public int damageWithWeaponFarquaad(int damageWithWeaponFarquaad)
+        {
+            return generator.Next(10, 18);
+        }*/
 
 
 

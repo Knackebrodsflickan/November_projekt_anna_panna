@@ -20,9 +20,15 @@ namespace November_projekt_anna_panna_te17a
 
             Hero MainHero = new Hero();
 
+            Enemy Farquaad = new Enemy();
+            Enemy TheFairyGodMother = new Enemy();
+            Enemy PrinceCharming = new Enemy();
 
+            Console.WriteLine("Which enemy would you like to battle first? Here are your options: ");
+            Console.WriteLine(Farquaad);
+            Console.ReadLine();
 
-
+            //Farquaad.speed = 200;
 
 
 

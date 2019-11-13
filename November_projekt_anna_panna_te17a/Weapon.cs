@@ -8,5 +8,6 @@ namespace November_projekt_anna_panna_te17a
 {
     class Weapon
     {
+        public static Random Wgenerator = new Random();
     }
 }
