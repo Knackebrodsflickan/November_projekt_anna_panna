@@ -26,15 +26,30 @@ namespace November_projekt_anna_panna_te17a
 
 
             Console.WriteLine("Which enemy would you like to battle first? Here are your options: ");
-            
-            Console.ReadLine();
+            Console.WriteLine("Farquuad");
+            Console.WriteLine("The Fairy Godmother");
+            Console.WriteLine("Prince Charming");
+            string ReadEnemyName = Console.ReadLine();
+            if(ReadEnemyName != "Farquaad" && ReadEnemyName != "The Fairy Godmother" && ReadEnemyName != "Prince Charming")
+            {
+                Console.WriteLine("Uh oh! that is not one of your enemies - if you feel like fighting with someone not on this list try reddit :)");
+                Console.ReadLine();
+            }
+            else if(ReadEnemyName == "Farquaad" || ReadEnemyName == "The Fairy Godmother" || ReadEnemyName == "Prince Charming")
+            {
+                Console.WriteLine("Good choice! You decided the Enemy: " + ReadEnemyName);
+                Console.WriteLine("Time to start the show! Can we get a count down?");
+                Console.ReadLine();
+            }
 
-            //Farquaad.speed = 200;
-            var name = "Farquaad";
 
-            Console.WriteLine("{0} is  {1} years old ", name );
-            Console.WriteLine(name.GetType());
-            Console.ReadLine();
+
+
+           
+
+
+
+
 
 
 
