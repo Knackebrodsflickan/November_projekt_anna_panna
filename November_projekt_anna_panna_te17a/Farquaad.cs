@@ -8,7 +8,7 @@ namespace November_projekt_anna_panna_te17a
 {
     class Farquaad : Enemy 
     {
-
+        
         public Farquaad()
         {
             name = "Farquaad";
@@ -18,6 +18,10 @@ namespace November_projekt_anna_panna_te17a
         {
             return generator.Next(2, 5);
 
+        }
+       public int damageWithWeaponFarquaad(int damageWithWeaponFarquaad)
+        {
+            return generator.Next(10, 25);
         }
 
         

@@ -9,7 +9,7 @@ namespace November_projekt_anna_panna_te17a
     class TheFairyGodMother : Enemy
     {
         
-
+       
 
         public int damageWihtoutWeaponFairyG(int damageWithoutWeaponFairyG)
         {
@@ -18,7 +18,7 @@ namespace November_projekt_anna_panna_te17a
         }
         public int damageWithWeaponFairyG(int damageWithWeaponFairyG)
         {
-            return generator.Next(10, 15);
+            return generator.Next(10, 20);
         }
     }
 }

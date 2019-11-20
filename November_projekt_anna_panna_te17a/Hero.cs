@@ -8,21 +8,29 @@ namespace November_projekt_anna_panna_te17a
 {
     class Hero
     {
+        static Random generator = new Random();
+
         private int maxDamageHero;
         private int minDamageHero;
         public int HpHero { get; private set; }
 
         public Hero()
         {
-            HpHero = 30;
-            minDamageHero = 5;
-            maxDamageHero = 10;
+            HpHero = 99;
+            minDamageHero = 6;
+            maxDamageHero = 20;
         }
 
-        
+        public void HurtHero(int amount)
+        {
+            HpHero -= amount;
+        }
 
-
-
+        public int Attack()
+        {
+            return generator.Next(minDamageHero, maxDamageHero);
+            
+        }
 
 
 
@@ -85,9 +93,17 @@ namespace November_projekt_anna_panna_te17a
                  xp = value;
                  Level = 1 + xp / 10;
              }
+              public void Attack(Hero opponent)
+        {
+            opponent.HurtHero(5);
+        }
 
 
 
+        public void Attack(Hero opponent)
+        {
+            opponent.HurtHero(5);
+        }
          }
          private int xp = 0; // om private, kan jag ändrau tan att det sör någon annan eller att någon annan märker 
          //private int level = 0;

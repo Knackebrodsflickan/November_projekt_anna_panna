@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace November_projekt_anna_panna_te17a
 {
@@ -24,7 +25,6 @@ namespace November_projekt_anna_panna_te17a
             Enemy TheFairyGodMother = new Enemy();
             Enemy PrinceCharming = new Enemy();
 
-
             Console.WriteLine("Which enemy would you like to battle first? Here are your options: ");
             Console.WriteLine("Farquuad");
             Console.WriteLine("The Fairy Godmother");
@@ -40,6 +40,28 @@ namespace November_projekt_anna_panna_te17a
                 Console.WriteLine("Good choice! You decided the Enemy: " + ReadEnemyName);
                 Console.WriteLine("Time to start the show! Can we get a count down?");
                 Console.ReadLine();
+
+                Console.WriteLine("Three");
+                Thread.Sleep(1000);
+                Console.WriteLine("Two");
+                Thread.Sleep(1000);
+                Console.WriteLine("One!");
+                Thread.Sleep(1000);
+                Console.WriteLine("Let the games begin!");
+                Console.ReadLine();
+
+                if(ReadEnemyName == "Farquaad")
+                {
+                    MainHero.HurtHero(Farquaad.Attack());
+                    Farquaad.HurtEnemy(MainHero.Attack());
+                    Console.WriteLine("Farquaad hp: " + Farquaad.getHp());
+                    Console.ReadLine();
+
+                }
+              
+                
+                
+
             }
 
 
