@@ -10,27 +10,31 @@ namespace November_projekt_anna_panna_te17a
     {
        public static Random generator = new Random();
 
-        public static int hp;
+        public static int hpEnemy;
         static public string name;
 
         public Enemy()
         {
-            hp = 99;
+            hpEnemy = 99;
             name = " ";
         }
 
         public void HurtEnemy(int amount)
         {
-            hp -= amount;
+            hpEnemy -= amount;
         }
         
         public int Attack()
         {
             return 5;
         }
-        public int getHp()
+        public int getHpEnemy()
         {
-            return hp;
+            if (hpEnemy < 0)
+            {
+                hpEnemy = 0;
+            }
+            return hpEnemy;
         }
 
 

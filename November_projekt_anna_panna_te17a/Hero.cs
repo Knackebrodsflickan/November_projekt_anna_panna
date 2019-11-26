@@ -31,7 +31,14 @@ namespace November_projekt_anna_panna_te17a
             return generator.Next(minDamageHero, maxDamageHero);
             
         }
-
+        public int getHpHero()
+        {
+            if(HpHero < 0)
+            {
+                HpHero = 0;
+            }
+            return HpHero;
+        }
 
 
 

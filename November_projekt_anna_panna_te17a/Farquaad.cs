@@ -12,6 +12,7 @@ namespace November_projekt_anna_panna_te17a
         public Farquaad()
         {
             name = "Farquaad";
+          
         }
 
         public int damageWihtoutWeaponFarquaad(int damageWithoutWeaponFarquaad)
@@ -24,14 +25,14 @@ namespace November_projekt_anna_panna_te17a
             return generator.Next(10, 25);
         }
 
-        
+
 
         //public string Name = "Farquaad"; 
 
-       /* public int damageWithWeaponFarquaad(int damageWithWeaponFarquaad)
-        {
-            return generator.Next(10, 18);
-        }*/
+        /* public int damageWithWeaponFarquaad(int damageWithWeaponFarquaad)
+         {
+             return generator.Next(10, 18);
+         }*/
 
 
 

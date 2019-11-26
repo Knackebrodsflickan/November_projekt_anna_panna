@@ -13,8 +13,8 @@ namespace November_projekt_anna_panna_te17a
         {
             Console.WriteLine("Welcome to Budget Mortal Wombat! The game where you suprisingly dont fight wombats! ");
             Console.ReadLine();
-            Console.WriteLine("What would you like to name your Hero?");
-            string MainName = Console.ReadLine();
+            Console.WriteLine("What would you like to name your Hero?"); // change readline to readkey memmo! 
+            string MainName = Console.ReadLine(); //keep
 
             Console.WriteLine("Your Hero´s name is: " + MainName + "!");
             Console.ReadLine();
@@ -42,25 +42,75 @@ namespace November_projekt_anna_panna_te17a
                 Console.ReadLine();
 
                 Console.WriteLine("Three");
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 Console.WriteLine("Two");
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 Console.WriteLine("One!");
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 Console.WriteLine("Let the games begin!");
                 Console.ReadLine();
 
                 if(ReadEnemyName == "Farquaad")
                 {
-                    MainHero.HurtHero(Farquaad.Attack());
-                    Farquaad.HurtEnemy(MainHero.Attack());
-                    Console.WriteLine("Farquaad hp: " + Farquaad.getHp());
-                    Console.ReadLine();
+                
+
+                    Console.WriteLine("Farquaad hp: " + Farquaad.getHpEnemy());
+                    Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
+                    Console.ReadKey();
+
+                    while (Farquaad.getHpEnemy() > 0 && MainHero.getHpHero() > 0)
+                    {
+                        MainHero.HurtHero(Farquaad.Attack());
+                        Farquaad.HurtEnemy(MainHero.Attack());
+                        Console.WriteLine("This is how its going so far");
+                        Console.WriteLine("Farquaad hp: " + Farquaad.getHpEnemy());
+                        Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
+                        Console.ReadKey();
+                        Console.WriteLine();
+                    }
+
+                    if (MainHero.getHpHero() <= 0)
+                    {
+
+                        Console.WriteLine("Uh oh! im sorry " + MainName + ", it looks like you lost! try again?");
+                        Console.ReadKey();
+                    }
+                    else if (Farquaad.getHpEnemy() <= 0)
+                    {
+                        Console.WriteLine("Congratulations! You won!");
+                        Console.ReadKey();
+                    }
+                    Console.ReadKey();
+
+
+                    /*  if (MainHero.getHpHero() < 0)
+                      {
+
+                          Console.WriteLine("Uh oh! im sorry " + MainName + "it looks like you lost! try again?");
+                          Console.ReadLine();
+                      }
+                      else if(Farquaad.getHpEnemy() < 0)
+                      {
+                          Console.WriteLine("Congratulations! You won!");
+                          Console.ReadLine();
+                      }
+                          Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+                      Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+                      Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+                      Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+                      Console.ReadLine();*/
+
+
+
 
                 }
-              
-                
-                
+
+
+
 
             }
 
