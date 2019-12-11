@@ -11,27 +11,27 @@ namespace November_projekt_anna_panna_te17a
         static Random generator = new Random();
 
         private int maxDamageHero;
-        private int minDamageHero;
-        public int HpHero { get; private set; }
+        private int minDamageHero; // int min / naxdamage som skulle kunna se på hero
+        public int HpHero { get; private set; } // här är hp till hero
 
-        public Hero()
+        public Hero() // en metod som kör när man kör main program , säger att hero innehåller hp, min och max damage
         {
             HpHero = 99;
             minDamageHero = 6;
             maxDamageHero = 20;
         }
 
-        public void HurtHero(int amount)
+        public void HurtHero(int amount) //när man kör mainkoden där heron tar skada så kommer denna metod köras, vilket tar bort hp när hero blir attackerad
         {
-            HpHero -= amount;
+            HpHero -= amount; 
         }
 
-        public int Attack()
+        public int Attack() //attack metod som används när hero slåss mot the enemy, själva damagen bestäms av en random generator jag gjort högst upp 
         {
             return generator.Next(minDamageHero, maxDamageHero);
             
         }
-        public int getHpHero()
+        public int getHpHero() //retunerar hp 
         {
             if(HpHero < 0)
             {

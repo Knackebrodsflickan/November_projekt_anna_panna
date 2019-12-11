@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class Farquaad : Enemy 
+    class Farquaad : Enemy //farquaad ärver av enemy
     {
         
         public Farquaad()

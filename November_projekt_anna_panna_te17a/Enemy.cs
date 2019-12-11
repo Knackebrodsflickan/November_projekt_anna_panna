@@ -13,22 +13,22 @@ namespace November_projekt_anna_panna_te17a
         public static int hpEnemy;
         static public string name;
 
-        public Enemy()
+        public Enemy() //enemy metod som innehåller hp och namn, gers sedan ut i arv 
         {
             hpEnemy = 99;
             name = " ";
         }
 
-        public void HurtEnemy(int amount)
+        public void HurtEnemy(int amount) //samma som hero, körs när enemy blir skadad
         {
             hpEnemy -= amount;
         }
         
-        public int Attack()
+        public int Attack() //åter igen, attacj metoden. 
         {
             return 5;
         }
-        public int getHpEnemy()
+        public int getHpEnemy() // här är för att få retunera hp 
         {
             if (hpEnemy < 0)
             {
