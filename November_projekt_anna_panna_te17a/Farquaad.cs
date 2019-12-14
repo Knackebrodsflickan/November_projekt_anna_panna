@@ -15,7 +15,8 @@ namespace November_projekt_anna_panna_te17a
           
         }
 
-        public int damageWihtoutWeaponFarquaad(int damageWithoutWeaponFarquaad)
+        public int damageWihtoutWeaponFarquaad(int damageWithoutWeaponFarquaad) // eventuellt sätt ville jag lägga till så jag hade damage med och utan vapen,
+            // men det blev lite för mycket plugg med annat och för lite tid här så det får gå till ett annat projekt 
         {
             return generator.Next(2, 5);
 

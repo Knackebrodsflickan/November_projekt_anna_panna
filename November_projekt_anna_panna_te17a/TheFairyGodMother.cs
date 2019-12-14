@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class TheFairyGodMother : Enemy
+    class TheFairyGodMother : Enemy // ärver av enemy 
     {
         
-       
+       public TheFairyGodMother()
+        {
+            name = "TheFairyGodMother";
+        }
 
         public int damageWihtoutWeaponFairyG(int damageWithoutWeaponFairyG)
         {

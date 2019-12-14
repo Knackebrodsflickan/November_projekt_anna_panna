@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class Enemy
+    class Enemy // ´är huvudklassen om man säger så, alt. mainKlassen
     {
        public static Random generator = new Random();
 

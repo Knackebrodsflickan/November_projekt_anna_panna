@@ -58,10 +58,11 @@ namespace November_projekt_anna_panna_te17a
                     Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
                     Console.ReadKey();
 
-                    while (Farquaad.getHpEnemy() > 0 && MainHero.getHpHero() > 0) // den här loopen ( alltså att dom slåss ) körs så länge deras hp inte droppar below 0 
+                    while (Farquaad.getHpEnemy() > 0 && MainHero.getHpHero() > 0) // den här loopen ( alltså att dom slåss ) körs så länge deras hp inte droppar below 0
+                        // om antingen farquaad eller spelarens karaktär får 0 så kommer spelet avbrytas och a winner will be announced!
                     {
                         MainHero.HurtHero(Farquaad.Attack());
-                        Farquaad.HurtEnemy(MainHero.Attack()); // kör metoden attack, vilket ger minus hp. 
+                        Farquaad.HurtEnemy(MainHero.Attack()); // kör en attack metod, vilket ger minus variabeln hp. 
                         Console.WriteLine("This is how its going so far");
                         Console.WriteLine("Farquaad hp: " + Farquaad.getHpEnemy());
                         Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
@@ -80,34 +81,70 @@ namespace November_projekt_anna_panna_te17a
                         Console.WriteLine("Congratulations! You won!");
                         Console.ReadKey();
                     }
-                    Console.ReadKey();
-
-
-                    /*  if (MainHero.getHpHero() < 0)
-                      {
-
-                          Console.WriteLine("Uh oh! im sorry " + MainName + "it looks like you lost! try again?");
-                          Console.ReadLine();
-                      }
-                      else if(Farquaad.getHpEnemy() < 0)
-                      {
-                          Console.WriteLine("Congratulations! You won!");
-                          Console.ReadLine();
-                      }
-                          Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
-                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
-                      Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
-                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
-                      Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
-                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
-                      Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
-                      Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
-                      Console.ReadLine();*/
-
-
-
+                    Console.ReadLine();
+                
 
                 }
+
+                else if (ReadEnemyName == "TheFairyGodMother")
+                {
+                    Console.WriteLine("The Fairy Godmothers Hp: " + TheFairyGodMother.getHpEnemy());
+                    Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
+                    Console.ReadKey();
+                    while (TheFairyGodMother.getHpEnemy() > 0 && MainHero.getHpHero() > 0)
+                    {
+                        MainHero.HurtHero(TheFairyGodMother.Attack());
+                        TheFairyGodMother.HurtEnemy(MainHero.Attack()); // kör metoden attack ( exxakt samma som med farquaad ) , vilket ger minus hp. 
+                        Console.WriteLine("This is how its going so far");
+                        Console.WriteLine("The fairy God Mother hp: " + TheFairyGodMother.getHpEnemy());
+                        Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
+                        Console.ReadKey();
+                        Console.WriteLine();
+
+                    }
+                    if (MainHero.getHpHero() <= 0)
+                    {
+
+                        Console.WriteLine("Uh oh! im sorry " + MainName + ", it looks like you lost! try again?"); // om hp är 0 för din hero karaktärer kommer du att dö och få meddelandet att du förlorat
+                        Console.ReadKey();
+                    }
+                    else if (TheFairyGodMother.getHpEnemy() <= 0) // Om the fairy godmother får 0 först vinnner du! 
+                    {
+                        Console.WriteLine("Congratulations! You won!");
+                        Console.ReadKey();
+                    }
+
+                }
+                else if (ReadEnemyName == "Prince Charming")
+                {
+                    Console.WriteLine("Prince Charmings Hp: " + PrinceCharming.getHpEnemy());
+                    Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
+                    Console.ReadKey();
+                    while (PrinceCharming.getHpEnemy() > 0 && MainHero.getHpHero() > 0)
+                    {
+                        MainHero.HurtHero(PrinceCharming.Attack());
+                        TheFairyGodMother.HurtEnemy(MainHero.Attack()); // kör metoden attack ( exxakt samma som med farquaad ) , vilket ger minus hp. 
+                        Console.WriteLine("This is how its going so far");
+                        Console.WriteLine("Prince Charming hp: " + PrinceCharming.getHpEnemy());
+                        Console.WriteLine(MainName + " hp: " + MainHero.getHpHero());
+                        Console.ReadKey();
+                        Console.WriteLine();
+
+                    }
+                    if (MainHero.getHpHero() <= 0)
+                    {
+
+                        Console.WriteLine("Uh oh! im sorry " + MainName + ", it looks like you lost! try again?"); // om hp är 0 för din hero karaktärer kommer du att dö och få meddelandet att du förlorat
+                        Console.ReadKey();
+                    }
+                    else if (PrinceCharming.getHpEnemy() <= 0) // Om the fairy godmother får 0 först vinnner du! 
+                    {
+                        Console.WriteLine("Congratulations! You won!");
+                        Console.ReadKey();
+                    }
+
+                }
+
 
 
 
@@ -117,12 +154,37 @@ namespace November_projekt_anna_panna_te17a
 
 
 
-           
 
 
 
 
 
+
+
+            // det som hänt nedanför här är massvis av kod som jag testat att köra, insett att det inte funkat och testat en annan typ av kod. 
+            // samma kod sekvens 
+
+            /*  if (MainHero.getHpHero() < 0)
+              {
+
+                  Console.WriteLine("Uh oh! im sorry " + MainName + "it looks like you lost! try again?");
+                  Console.ReadLine();
+              }
+              else if(Farquaad.getHpEnemy() < 0)
+              {
+                  Console.WriteLine("Congratulations! You won!");
+                  Console.ReadLine();
+              }
+                  Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack()); // detta exempelvis insågs rätt snabbt att jag bara kunde göra en loop av de
+                  // tills någon av dem dog, istället för att skriva ut det på de här långa sättet. 
+              Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+              Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+              Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+              Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+              Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+              Console.WriteLine(MainName + " attacks Farquaad"); MainHero.HurtHero(Farquaad.Attack());
+              Console.WriteLine("Farquaad attacked " + MainName); Farquaad.HurtEnemy(MainHero.Attack());
+              Console.ReadLine();*/
 
 
 

@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class PrinceCharming : Enemy
+    class PrinceCharming : Enemy // ärver av enemy
+
     {
-        public int PrinceCWithoutWeapon(int PrinceCWithoutWeapon)
+
+        public PrinceCharming()
+        {
+            name = "PrinceCharming";
+        }
+
+        public int PrinceCWithoutWeapon(int PrinceCWithoutWeapon) // så dessa är ju fullt funktionella, bara det att jag inte haft tid att
+            // lägga in dem ännu, bara för jag inte haft någon tid. 
         {
             return generator.Next(1, 10);
         }

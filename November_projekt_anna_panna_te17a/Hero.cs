@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace November_projekt_anna_panna_te17a
 {
-    class Hero
+    class Hero // en liten förbättring jag skulle velat göra här, är att möjligen skapa tre karaktärer som ärver av hero, men har olika atributes 
+        // som exempelvis olika strenght och liknande, och sedan kasta in det i unity o skapa ett budget mmortal kombat ( wombat! ) spel : )
     {
         static Random generator = new Random();
 
